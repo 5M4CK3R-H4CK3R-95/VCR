@@ -1,0 +1,61 @@
+#!/bin/python3
+import os
+from time import sleep
+def logo():
+	print('''
+               ______   _____
+\           / |        |     |
+ \         /  |        |     |
+  \       /   |        |_____|
+   \     /    |        |  \ 
+    \   /     |        |   \ 
+     \_/      |______  |    \ 
+
+ Author : 5M4CK3R
+
+		''')
+
+def crypter():
+	try:
+		os.system('clear')
+		logo()
+		print("Please Enter the path and name of the apk to encrypt")
+		print('')
+		name = input('<<<-VCR->>> : ')
+		if not os.path.exists(name):
+			os.system('clear')
+			print('')
+			print('Wrong Path or file name enter agan')
+			print('')
+			exit()
+		print('')
+		print('Enter the outfile path and name')
+		print('')
+		output_name = input('<<<-VCR->>> : ')
+		print('')
+		print('Speacial Worning : Donot upload this file in virustotal or')
+		print('Any file uploading websites like mediafire mega and other ')
+		print('always upload the file in  ')
+		print('')
+		print('If You have read all the worning then press enter other wise')
+		print('read them')
+		input('')
+		print('')
+		print('Please Wait While crypting apk')
+		print('')
+		os.system('java -Xmx1024m -jar "/bin/data/crp.jar" sign  --key "/bin/data/vcr.pk8" --cert "/bin/data/vcr.pem" --out ' + output_name + ' ' + name )
+		if not os.path.exists(output_name):
+			print('')
+			print('Error ...')
+			exit()
+		else:
+			os.system('clear')
+			print('')
+			print('Done File Crypted ....')
+			print('')
+	except:
+		print('')
+		print('Error ...')
+		print('')
+		exit()
+crypter()
