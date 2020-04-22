@@ -12,6 +12,10 @@ apt install git
 git clone https://github.com/5M4CK3R-H4CK3R-95/VCR.git
 cd VCR
 chmod +x *
-./vcr
+bash installer.sh
+vcr
 
 ```
+#How To use
+
+just type vcr in where your apk is to encrypt
